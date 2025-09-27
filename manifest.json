@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Discourse User Notes",
+    "version": "1.0",
+    "description": "Take personal local notes on users in Discourse forums",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "content.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Discourse User Notes"
+    }
+}
