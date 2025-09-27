@@ -27,10 +27,22 @@ This extension adds a clickable icon next to every username on Discourse forum p
 
 ## Usage
 
-1. **Adding notes**: Visit any Discourse forum and click the 📝 icon next to any username
-2. **Editing notes**: Click the 🔖 icon next to users who already have notes to edit them
-3. **Viewing all notes**: Click the extension icon in Chrome's toolbar to see all your saved notes
-4. **Managing notes**: Use the popup window to review or delete notes as needed
+1. **Adding notes**: Visit any Discourse forum and click the 📝 icon next to any username:
+
+    ![Notes Icon](/screenshots/Discourse_Notes2.png)
+    ![Notes Icon 2](/screenshots/Discourse_Notes3.png)
+
+2. **Editing notes**: Click the 🔖 icon next to users who already have notes to edit them:
+
+    ![Editing Notes](/screenshots/Discourse_Notes1.png)
+
+3. **Viewing all notes**: Click the extension icon in Chrome's toolbar to see all your saved notes:
+
+    ![Viewing Notes](/screenshots/Discourse_Notes4.png)
+
+4. **Managing notes**: Use the popup window to review, edit or delete notes as needed:
+
+    ![Edit In Pop Up](/screenshots/Discourse_Notes5.png)
 
 ## Privacy
 
