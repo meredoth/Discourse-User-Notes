@@ -179,17 +179,14 @@ function addNoteIcons() {
     const userElements = document.querySelectorAll('[data-user-card]');
     userElements.forEach(element => {
         // Check for existing icon OR processing marker
-        if (element.querySelector('.discourse-note-icon') || element.hasAttribute('data-processing-note')) {
-            return;
-        }
+        if (element.querySelector('.discourse-note-icon') || element.hasAttribute('data-processing-note')) return;
 
         const username = element.getAttribute('data-user-card');
-        if (username) {
-            // Mark as being processed
+        if (username)
+        {
             element.setAttribute('data-processing-note', 'true');
 
             chrome.storage.local.get([`note_${username}`], (result) => {
-                // Remove processing marker
                 element.removeAttribute('data-processing-note');
 
                 const hasNote = !!result[`note_${username}`];
