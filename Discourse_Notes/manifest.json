@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Discourse User Notes",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Take personal local notes on users in Discourse forums",
     "permissions": [
         "storage",

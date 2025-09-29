@@ -175,16 +175,23 @@ function init()
     });
 }
 
-function addNoteIcons()
-{
+function addNoteIcons() {
     const userElements = document.querySelectorAll('[data-user-card]');
     userElements.forEach(element => {
-        if (element.querySelector('.discourse-note-icon')) return;
+        // Check for existing icon OR processing marker
+        if (element.querySelector('.discourse-note-icon') || element.hasAttribute('data-processing-note')) {
+            return;
+        }
 
         const username = element.getAttribute('data-user-card');
-        if (username)
-        {
+        if (username) {
+            // Mark as being processed
+            element.setAttribute('data-processing-note', 'true');
+
             chrome.storage.local.get([`note_${username}`], (result) => {
+                // Remove processing marker
+                element.removeAttribute('data-processing-note');
+
                 const hasNote = !!result[`note_${username}`];
                 const icon = createNoteIcon(username, hasNote);
                 element.appendChild(icon);
